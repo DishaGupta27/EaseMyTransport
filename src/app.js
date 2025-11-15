@@ -1,0 +1,28 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const auth = require('./middleware/auth');
+
+const usersRoute = require('./routes/users');
+const bookingsRoute = require('./routes/bookings');
+const paymentsRoute = require('./routes/payments');
+
+const app = express();
+
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+
+// auth middleware to populate req.user from x-user-id header (if provided)
+app.use(auth);
+
+app.use('/users', usersRoute);
+app.use('/bookings', bookingsRoute);
+app.use('/payments', paymentsRoute);
+
+// basic error handler
+app.use((err, req, res, next) => {
+    console.error('Unhandled error:', err);
+    res.status(500).json({ error: 'Internal server error' });
+});
+
+module.exports = app;
