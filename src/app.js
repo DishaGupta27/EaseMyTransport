@@ -19,7 +19,6 @@ app.use('/users', usersRoute);
 app.use('/bookings', bookingsRoute);
 app.use('/payments', paymentsRoute);
 
-// basic error handler
 app.use((err, req, res, next) => {
     console.error('Unhandled error:', err);
     res.status(500).json({ error: 'Internal server error' });
