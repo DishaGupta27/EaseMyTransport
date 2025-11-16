@@ -11,8 +11,6 @@ const app = express();
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
-
-// auth middleware to populate req.user from x-user-id header (if provided)
 app.use(auth);
 
 app.use('/users', usersRoute);
