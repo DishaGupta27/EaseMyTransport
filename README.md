@@ -39,6 +39,7 @@ This project handles **Users, Bookings, and Payments**, and includes basic role-
     ```
 
 3. **Create a .env file:**
+   ```bash
    MONGO_URI=mongodbURL
    PORT=5000
     ```
