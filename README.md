@@ -27,10 +27,69 @@ This project handles **Users, Bookings, and Payments**, and includes basic role-
 
 # 🚀 Getting Started
 
-## 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/your-username/EaseMyTransport.git
-cd EaseMyTransport
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/EaseMyTransport.git
+    cd EaseMyTransport
+     ```
 
-## 1️⃣ Clone the Repository
-```bash
+2. **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3. **Create a .env file:**
+    MONGO_URI=your_mongodb_url
+    PORT=5000
+    ```
+
+4. **Run the app locally:**
+    ```bash
+    npm run dev
+    ```
+---
+
+## 🧪 Authentication (Important)
+
+This backend uses a simple header called x-user-id to identify the logged-in user.
+
+Every request that needs a logged-in user (Booking / Payment APIs) must include:
+
+ ```bash
+  x-user-id: <MongoDB user ID>
+    ```
+     ```bash
+  x-user-id: 67a74ea726e13d4f45cc8021
+    ```
+---
+
+## 🗂️ Project Structure
+
+EaseMyTransport/
+│
+├── controllers/
+│   ├── userController.js
+│   ├── bookingController.js
+│   └── paymentController.js
+│
+├── models/
+│   ├── User.js
+│   ├── Booking.js
+│   └── Payment.js
+│
+├── routes/
+│   ├── userRoutes.js
+│   ├── bookingRoutes.js
+│   └── paymentRoutes.js
+│
+├── middleware/
+│   └── authMiddleware.js
+│
+├── config/
+│   └── db.js
+│
+├── app.js
+├── server.js
+└── README.md
+
+
