@@ -56,39 +56,39 @@ This backend uses a simple header called x-user-id to identify the logged-in use
 
 Every request that needs a logged-in user (Booking / Payment APIs) must include:
 
-x-user-id: <MongoDB user ID>
-Example:
-x-user-id: 67a74ea726e13d4f45cc8021
-
+   ```bash
+   x-user-id: <MongoDB user ID>
+    ```
+ ```bash
+ x-user-id: 67a74ea726e13d4f45cc8021
+```
 ---
 
 ## 🗂️ Project Structure
 
-EaseMyTransport/
-│
-├── controllers/
-│   ├── userController.js
-│   ├── bookingController.js
-│   └── paymentController.js
-│
-├── models/
-│   ├── User.js
-│   ├── Booking.js
-│   └── Payment.js
-│
-├── routes/
-│   ├── userRoutes.js
-│   ├── bookingRoutes.js
-│   └── paymentRoutes.js
-│
-├── middleware/
-│   └── authMiddleware.js
-│
-├── config/
-│   └── db.js
-│
-├── app.js
-├── server.js
-└── README.md
+ease-my-transport/
+├─ package.json
+├─ .env.example
+├─ README.md
+├─ src/
+│  ├─ app.js
+│  ├─ server.js
+│  ├─ config/
+│  │  └─ db.js
+│  ├─ models/
+│  │  ├─ User.js
+│  │  ├─ Booking.js
+│  │  └─ Payment.js
+│  ├─ routes/
+│  │  ├─ users.js
+│  │  ├─ bookings.js
+│  │  └─ payments.js
+│  ├─ controllers/
+│  │  ├─ userController.js
+│  │  ├─ bookingController.js
+│  │  └─ paymentController.js
+│  └─ middleware/
+│     └─ auth.js
+
 
 
