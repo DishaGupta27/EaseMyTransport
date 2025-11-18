@@ -65,7 +65,7 @@ Every request that needs a logged-in user (Booking / Payment APIs) must include:
 ---
 
 ## 🗂️ Project Structure
-
+```bash
 ease-my-transport/
 ├─ package.json
 ├─ .env.example
@@ -89,6 +89,7 @@ ease-my-transport/
 │  │  └─ paymentController.js
 │  └─ middleware/
 │     └─ auth.js
-
+ 
+```
 
 
