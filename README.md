@@ -39,8 +39,8 @@ This project handles **Users, Bookings, and Payments**, and includes basic role-
     ```
 
 3. **Create a .env file:**
-    MONGO_URI=your_mongodb_url
-    PORT=5000
+   MONGO_URI=mongodbURL
+   PORT=5000
     ```
 
 4. **Run the app locally:**
@@ -55,12 +55,10 @@ This backend uses a simple header called x-user-id to identify the logged-in use
 
 Every request that needs a logged-in user (Booking / Payment APIs) must include:
 
- ```bash
-  x-user-id: <MongoDB user ID>
-    ```
-     ```bash
-  x-user-id: 67a74ea726e13d4f45cc8021
-    ```
+x-user-id: <MongoDB user ID>
+Example:
+x-user-id: 67a74ea726e13d4f45cc8021
+
 ---
 
 ## 🗂️ Project Structure
