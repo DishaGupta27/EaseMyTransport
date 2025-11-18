@@ -31,3 +31,6 @@ This project handles **Users, Bookings, and Payments**, and includes basic role-
 ```bash
 git clone https://github.com/your-username/EaseMyTransport.git
 cd EaseMyTransport
+
+## 1️⃣ Clone the Repository
+```bash
